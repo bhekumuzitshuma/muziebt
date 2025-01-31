@@ -10,9 +10,25 @@ export default {
   },
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      animation: {
+        "pulse-slow": "pulse 6s infinite",
+        "fade-in-up": "fadeInUp 0.5s ease-out",
+        star: "twinkle 1.5s infinite",
+        "infinite-scroll": "infiniteScroll 20s linear infinite",
+      },
+      keyframes: {
+        infiniteScroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        fadeInUp: {
+          "0%": { opacity: 0, transform: "translateY(20px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: 0.5 },
+          "50%": { opacity: 1 },
+        },
       },
     },
   },

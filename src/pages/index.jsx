@@ -1,10 +1,23 @@
+import ExperienceSection from "@/components/ExperienceSection";
+import Hero from "@/components/Hero";
+import InfiniteLogoCarousel from "@/components/InfiniteLogoCarousel";
 import MainLayout from "@/components/layout/MainLayout";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <MainLayout>
-      <section></section>
+      {/* Hero Section */}
+      <section>
+        <Hero />
+        <div className="mt-5 max-w-6xl mx-auto pb-10">
+          <InfiniteLogoCarousel />
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="max-w-5xl mx-auto px-3">
+        <ExperienceSection />
+      </section>
     </MainLayout>
   );
 }
