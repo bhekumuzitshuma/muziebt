@@ -58,7 +58,7 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="text-lg md:text-xl text-gray-600 text-center mb-16"
         >
-          I build systems that don’t break.
+          I build systems that don't break.
         </motion.p>
 
         {/* Vertical Timeline */}
