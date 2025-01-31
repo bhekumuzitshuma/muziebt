@@ -1,3 +1,4 @@
+import BlogSection from "@/components/BlogSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import Hero from "@/components/Hero";
 import InfiniteLogoCarousel from "@/components/InfiniteLogoCarousel";
@@ -17,6 +18,11 @@ export default function Home() {
       {/* Experience Section */}
       <section className="max-w-5xl mx-auto px-3">
         <ExperienceSection />
+      </section>
+
+      {/* Blog Section */}
+      <section>
+        <BlogSection />
       </section>
     </MainLayout>
   );

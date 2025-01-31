@@ -92,7 +92,7 @@ const ExperienceSection = () => {
               {index === 0 && (
                 <a
                   href="#work"
-                  className="inline-flex items-center px-4 py-2 mt-4 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100"
+                  className="inline-flex items-center px-4 py-2 mt-4 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-green-600 hover:border-green-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100"
                 >
                   🔗 Download My CV
                 </a>
