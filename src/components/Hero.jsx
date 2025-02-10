@@ -35,7 +35,7 @@ const Hero = () => {
             🔗 See My Work
           </a>
           <a
-            href="#blog"
+            href="https://muzie-bt.medium.com/"
             className="btn bg-base-300 hover:text-green-600 transition-transform transform hover:scale-105"
           >
             📝 Read the Blog

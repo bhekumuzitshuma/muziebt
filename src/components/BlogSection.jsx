@@ -20,7 +20,7 @@ const posts = [
     title: "CI/CD: Automate Everything or Enjoy Deployment Nightmares",
     date: "Jan 10, 2025",
     excerpt:
-      "Manual deployments? Seriously? It's 2025. Here's how to automate your pipeline like a pro.",
+      "Manual deployments? Seriously? It's 2025. Here's how to automate your pipeline .",
     slug: "cicd-automation",
   },
 ];
@@ -38,7 +38,7 @@ export default function BlogSection() {
       </motion.h2>
       <div className="mb-8">
         <p className="text-center">
-          Stay updated with our latest articles and insights on software
+          Stay updated with my latest articles and insights on software
           development.
         </p>
       </div>
@@ -54,12 +54,13 @@ export default function BlogSection() {
             <h3 className="text-2xl font-semibold mb-2">{post.title}</h3>
             <p className="text-gray-700 text-sm mb-4">{post.date}</p>
             <p className="text-gray-900">{post.excerpt}</p>
-            <Link
-              href={`/blog/${post.slug}`}
+            <a
+              href="https://muzie-bt.medium.com/"
+              target="_blank"
               className="text-teal-700 mt-4 inline-block hover:underline"
             >
               Read More →
-            </Link>
+            </a>
           </motion.div>
         ))}
       </div>

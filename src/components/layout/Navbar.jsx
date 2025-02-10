@@ -30,7 +30,9 @@ const Navbar = () => {
                 <a>Home</a>
               </li>
               <li>
-                <a>Blog</a>
+                <a href="https://muzie-bt.medium.com/" target="_blank">
+                  Blog
+                </a>
               </li>
               <li>
                 <a>Developer Survey</a>
@@ -51,7 +53,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">@muzie_bt</a>
+          <a className="btn btn-ghost text-xl">@muzie_bt.</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -59,7 +61,9 @@ const Navbar = () => {
               <a>Home</a>
             </li>
             <li>
-              <a>Blog</a>
+              <a href="https://muzie-bt.medium.com/" target="_blank">
+                Blog
+              </a>
             </li>
             <li>
               <details>
