@@ -15,13 +15,15 @@ const Hero = () => {
           🚀 Backend Developer | System Architect | Cybersecurity
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in-up delay-100">
-          Building systems that don't fail, securing them from people who do.
+          Engineering software that scales, adapts, and secures your business.
         </p>
         <p className="text-base text-gray-600 mb-12 animate-fade-in-up delay-200">
-          I write software that works, break software that shouldn't, and
-          automate everything in between. If you're here to explore my projects,
-          read my blog rants, or see which tech stacks are taking over Zimbabwe
-          (ZW), congratulations—you have good taste.
+          Building the backbone of digital systems, architecting solutions that
+          scale, and securing them against the inevitable chaos.
+          <span className="font-black text-green-500">
+            {" "}
+            See which tech stacks are taking over Zimbabwe (ZW)
+          </span>
         </p>
 
         {/* Buttons */}

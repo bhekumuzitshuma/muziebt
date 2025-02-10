@@ -24,6 +24,12 @@ export default function Home() {
       <section>
         <BlogSection />
       </section>
+
+      {/* Projects Section */}
+      <section></section>
+
+      {/* About the Tech Survey */}
+      <section></section>
     </MainLayout>
   );
 }

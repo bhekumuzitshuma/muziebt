@@ -24,7 +24,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu z-50 menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow"
             >
               <li>
                 <a>Home</a>
@@ -35,7 +35,7 @@ const Navbar = () => {
               <li>
                 <a>Developer Survey</a>
                 <ul className="p-2">
-                  <li>
+                  <li className="border-b">
                     <a>Take the 2025 Developer Survey</a>
                   </li>
                   <li>
@@ -64,12 +64,16 @@ const Navbar = () => {
             <li>
               <details>
                 <summary>Developer Survey</summary>
-                <ul className="p-2">
+                <ul className="p-2 z-50 border rounded-sm w-[200px]">
                   <li>
-                    <a>Take the 2025 Developer Survey</a>
+                    <a className="hover:font-black">
+                      Take the 2025 Developer Survey
+                    </a>
                   </li>
                   <li>
-                    <a>2024 Developer Survey Results</a>
+                    <a className="hover:font-black">
+                      2024 Developer Survey Results
+                    </a>
                   </li>
                 </ul>
               </details>
