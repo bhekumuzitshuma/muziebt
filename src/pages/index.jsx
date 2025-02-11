@@ -1,5 +1,6 @@
 import BlogSection from "@/components/BlogSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import FeaturesSection from "@/components/FeaturesSection";
 import Hero from "@/components/Hero";
 import InfiniteLogoCarousel from "@/components/InfiniteLogoCarousel";
 import MainLayout from "@/components/layout/MainLayout";
@@ -17,19 +18,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Features Section */}
       <section className="max-w-5xl mx-auto px-3">
-        <ExperienceSection />
+        <FeaturesSection />
       </section>
 
       {/* Blog Section */}
       <section>
         <BlogSection />
-      </section>
-
-      {/* Projects Section */}
-      <section>
-        <Projects />
       </section>
 
       {/* About the Tech Survey */}

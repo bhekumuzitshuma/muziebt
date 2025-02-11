@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -27,7 +28,9 @@ const Navbar = () => {
               className="menu z-50 menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <Link href="/" legacyBehavior>
+                  <a>Home</a>
+                </Link>
               </li>
               <li>
                 <a href="https://muzie-bt.medium.com/" target="_blank">
@@ -38,7 +41,9 @@ const Navbar = () => {
                 <a>Developer Survey</a>
                 <ul className="p-2">
                   <li className="border-b">
-                    <a>Take the 2025 Developer Survey</a>
+                    <a href="/tech-stack-survey/take">
+                      Take the 2025 Developer Survey
+                    </a>
                   </li>
                   <li>
                     <a>2024 Developer Survey Results</a>
@@ -58,7 +63,9 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <Link href="/" legacyBehavior>
+                <a>Home</a>
+              </Link>
             </li>
             <li>
               <a href="https://muzie-bt.medium.com/" target="_blank">
@@ -70,9 +77,11 @@ const Navbar = () => {
                 <summary>Developer Survey</summary>
                 <ul className="p-2 z-50 border rounded-sm w-[200px]">
                   <li>
-                    <a className="hover:font-black">
-                      Take the 2025 Developer Survey
-                    </a>
+                    <Link href="/tech-stack-survey/take" legacyBehavior>
+                      <a className="hover:font-black">
+                        Take the 2025 Developer Survey
+                      </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="hover:font-black">
@@ -83,15 +92,21 @@ const Navbar = () => {
               </details>
             </li>
             <li>
-              <a>Projects</a>
+              <Link href="/projects" legacyBehavior>
+                <a>Projects</a>
+              </Link>
             </li>
             <li>
-              <a>My Career</a>
+              <Link href="/my-career" legacyBehavior>
+                <a>My Career</a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn ">Contact Me</a>
+          <a href="tel:0779016823" className="btn">
+            Contact Me
+          </a>
         </div>
       </div>
     </div>

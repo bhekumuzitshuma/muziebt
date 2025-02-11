@@ -34,7 +34,10 @@ export default function BlogSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        📝 The Blog
+        📝 The{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-black">
+          Blog
+        </span>
       </motion.h2>
       <div className="mb-8">
         <p className="text-center">
@@ -46,7 +49,7 @@ export default function BlogSection() {
         {posts.map((post, index) => (
           <motion.div
             key={post.slug}
-            className="p-6 bg-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            className="p-6 bg-gray-100 rounded-2xl  hover:shadow-xl transition-all duration-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
