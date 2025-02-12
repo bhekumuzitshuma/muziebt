@@ -10,14 +10,11 @@ const HeaderComponent = ({ title, breadcrumbs }) => {
       <nav className="mt-2">
         <ul className="flex space-x-2 text-sm text-gray-600">
           {breadcrumbs.map((crumb, index) => (
-            <li
-              key={index}
-              className="flex items-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-black"
-            >
+            <li key={index} className="flex items-center ">
               {index > 0 && <span className="mx-2">/</span>}
               <a
                 href={crumb.link}
-                className="hover:text-gray-900 hover:underline transition-colors duration-200"
+                className="hover:text-gray-900 hover:underline text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-black transition-colors duration-200"
               >
                 {crumb.label}
               </a>

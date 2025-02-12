@@ -14,6 +14,7 @@ export default {
         "pulse-slow": "pulse 6s infinite",
         "fade-in-up": "fadeInUp 0.5s ease-out",
         star: "twinkle 1.5s infinite",
+
         "infinite-scroll": "infiniteScroll 20s linear infinite",
       },
       keyframes: {
