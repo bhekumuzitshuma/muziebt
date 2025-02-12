@@ -41,9 +41,9 @@ const Navbar = () => {
                 <a>Developer Survey</a>
                 <ul className="p-2">
                   <li className="border-b">
-                    <a href="/tech-stack-survey/take">
-                      Take the 2025 Developer Survey
-                    </a>
+                    <Link href="/tech-stack-survey/take" legacyBehavior>
+                      <a>Take the 2025 Developer Survey</a>
+                    </Link>
                   </li>
                   <li>
                     <a>2024 Developer Survey Results</a>
@@ -51,14 +51,22 @@ const Navbar = () => {
                 </ul>
               </li>
               <li>
-                <a>Projects</a>
+                <Link href="/projects" legacyBehavior>
+                  <a>Projects</a>
+                </Link>
               </li>
               <li>
-                <a>My Career</a>
+                <Link href="/my-career" legacyBehavior>
+                  <a>My Career</a>
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">@muzie_bt.</a>
+          <a href="/" className="btn btn-ghost text-xl">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-black">
+              @bhekumuzi.
+            </span>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -104,7 +112,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a href="tel:0779016823" className="btn">
+          <a href="tel:0779016823" className="green-btn">
             Contact Me
           </a>
         </div>

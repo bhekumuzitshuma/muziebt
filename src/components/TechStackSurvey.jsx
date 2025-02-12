@@ -13,7 +13,7 @@ const TechStackSurvey = () => {
 
   return (
     <section className="">
-      <div className="relative py-16  sm:px-6  bg-gradient-to-r text-gray-800 overflow-hidden">
+      <div className="relative py-16  px-4 sm:px-6  bg-gradient-to-r text-gray-800 overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">
             Tech Stack{" "}
