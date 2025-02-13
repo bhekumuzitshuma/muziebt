@@ -46,7 +46,12 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a>2024 Developer Survey Results</a>
+                    <Link
+                      href="/tech-stack-survey/survey-results"
+                      legacyBehavior
+                    >
+                      <a>2024 Developer Survey Results</a>
+                    </Link>
                   </li>
                 </ul>
               </li>
