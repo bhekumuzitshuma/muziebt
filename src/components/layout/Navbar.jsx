@@ -62,9 +62,9 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a href="/" className="btn btn-ghost text-xl">
+          <a href="/" className="btn text-sm btn-ghost md:text-xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-black">
-              The M@trix Exploit.
+              @bhekumuzi
             </span>
           </a>
         </div>
