@@ -1,5 +1,6 @@
 import React from "react";
 import MaintenanceComponent from "@/components/Maintainance";
+import MainLayout from "@/components/layout/MainLayout";
 
 const Index = () => {
   const logo = (
@@ -14,14 +15,13 @@ const Index = () => {
     </svg>
   );
   return (
-    <div>
+    <MainLayout>
       <MaintenanceComponent
         title="I'm working on something awesome!"
         description="Stay tuned! l'll be back soon with exciting updates."
-        imageUrl="https://pagedone.io/asset/uploads/1718004199.png"
         targetDate="2025-04-30T23:59:59" // Custom target date
       />
-    </div>
+    </MainLayout>
   );
 };
 

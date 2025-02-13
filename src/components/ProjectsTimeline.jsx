@@ -53,7 +53,7 @@ const projects = [
   },
   {
     year: "2024",
-    title: "AI-Powered Cattle Disease Detection App",
+    title: "AI-Powered Cattle Disease Detection App (School Group Project)",
     description:
       "Built an AI-driven cross-platform mobile app using TensorFlow and React Native. The app utilized machine learning models to analyze cattle symptoms and detect potential diseases. It included offline functionality, real-time notifications, and a farmer-friendly interface to assist in early disease detection and livestock health management.",
     icon: <FaBrain />,

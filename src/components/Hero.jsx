@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -28,24 +29,22 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-up delay-300">
-          <a
-            href="#work"
-            className="btn bg-base-300 hover:text-green-600 transition-transform transform hover:scale-105"
-          >
-            🔗 See My Work
-          </a>
+          <Link href="/projects" legacyBehavior>
+            <a className="btn bg-base-300 hover:text-green-600 transition-transform transform hover:scale-105">
+              🔗 See My Work
+            </a>
+          </Link>
           <a
             href="https://muzie-bt.medium.com/"
             className="btn bg-base-300 hover:text-green-600 transition-transform transform hover:scale-105"
           >
             📝 Read the Blog
           </a>
-          <a
-            href="#survey"
-            className="btn bg-base-300 hover:text-green-600 transition-transform transform hover:scale-105"
-          >
-            📊 Tech Stack Survey
-          </a>
+          <Link href="/tech-stack-survey/take" legacyBehavior>
+            <a className="btn bg-base-300 hover:text-green-600 transition-transform transform hover:scale-105">
+              📊 Tech Stack Survey
+            </a>
+          </Link>
         </div>
       </div>
 

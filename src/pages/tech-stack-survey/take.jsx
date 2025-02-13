@@ -10,6 +10,7 @@ import ChallengesOpportunitiesStep from "../../components/Survey/ChallengesOppor
 
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import Seo from "@/components/SEO";
 
 const TakeSurvey = () => {
   const [step, setStep] = useState(1);
@@ -76,6 +77,14 @@ const TakeSurvey = () => {
 
   return (
     <MainLayout>
+      <Seo
+        title="African Developer Survey 2025 | The Matrix Exploit"
+        description="Join the annual developer survey for African developers and tech professionals. Share insights on coding trends, salaries, and tools shaping Africa's tech industry."
+        ogTitle="2025 African Developer Survey | The M@trix Exploit"
+        ogDescription="Join the annual developer survey for African developers and tech professionals."
+        ogImage="/devsurvey.png"
+        ogUrl="https://bhekumuzitshuma.netlify.app/"
+      />
       <div className="max-w-4xl mx-auto my-4">
         <div className="p-4">
           {step === 1 && (

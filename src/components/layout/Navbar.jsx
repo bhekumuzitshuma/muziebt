@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
           <a href="/" className="btn btn-ghost text-xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-black">
-              @bhekumuzi.
+              The M@trix Exploit.
             </span>
           </a>
         </div>
@@ -83,18 +83,26 @@ const Navbar = () => {
             <li>
               <details>
                 <summary>Developer Survey</summary>
-                <ul className="p-2 z-50 border rounded-sm w-[200px]">
+                <ul className="p-2 z-50 border rounded-sm w-[300px]">
                   <li>
                     <Link href="/tech-stack-survey/take" legacyBehavior>
-                      <a className="hover:font-black">
+                      <a className="hover:text-green-900">
                         Take the 2025 Developer Survey
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <a className="hover:font-black">
-                      2024 Developer Survey Results
-                    </a>
+                    <Link
+                      href="/tech-stack-survey/survey-results"
+                      legacyBehavior
+                    >
+                      <a className="hover:text-green-900">
+                        2025 Developer Survey Results
+                        <span className=" gradient-text text-xs font-bold p-1 rounded-lg">
+                          live
+                        </span>
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </details>
