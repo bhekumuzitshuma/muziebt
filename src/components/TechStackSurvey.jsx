@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaChartPie, FaPoll, FaArrowRight } from "react-icons/fa";
 
@@ -27,7 +28,7 @@ const TechStackSurvey = () => {
             <div className="bg-gray-100 p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-black mb-6 flex items-center">
                 <FaChartPie className="mr-2 text-green-500" /> Last Year's
-                Results
+                Results (fake - 2025 loading)
               </h3>
               <div className="space-y-4">
                 <p className="text-black">Most Used Programming Languages</p>
@@ -68,12 +69,16 @@ const TechStackSurvey = () => {
                 professional work!
               </p>
               <div className="space-y-4">
-                <button className="w-full  sm:w-auto flex items-center justify-center bg-gradient-to-r from-green-600 to-black hover:from-black hover:to-green-600 text-white px-6 py-3 rounded-lg hover:scale-105 transform transition-all duration-300">
-                  <FaPoll className="mr-2" /> Take the Current Survey
-                </button>
-                <button className="w-full sm:w-auto flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:text-green-400 hover:bg-gray-600 hover:scale-105 transform transition-all duration-300">
-                  <FaArrowRight className="mr-2" /> View Last Year's Results
-                </button>
+                <Link href="/tech-stack-survey/take" legacyBehavior>
+                  <a className="w-full  sm:w-auto flex items-center justify-center bg-gradient-to-r from-green-600 to-black hover:from-black hover:to-green-600 text-white px-6 py-3 rounded-lg hover:scale-105 transform transition-all duration-300">
+                    <FaPoll className="mr-2" /> Take the Current Survey
+                  </a>
+                </Link>
+                <Link href="/tech-stack-survey/survey-results" legacyBehavior>
+                  <a className="w-full sm:w-auto flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:text-green-400 hover:bg-gray-600 hover:scale-105 transform transition-all duration-300">
+                    <FaArrowRight className="mr-2" /> View Last Year's Results
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
