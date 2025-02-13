@@ -6,17 +6,16 @@ const DemographicStep = ({ data, onChange, nextStep }) => {
   return (
     <div>
       <h2 className="text-xl font-bold">Demographics</h2>
-      <div className="mt-4">
-        <label className="block">Country</label>
+      <div className="my-4">
+        <label className="block">
+          <span className="gradient-text font-bold">Country</span>
+        </label>
 
         <select
           value={data.country}
           onChange={handleInputChange("country")}
           className="select select-bordered w-full"
         >
-          <option disabled selected>
-            Select Country
-          </option>
           {[
             "Algeria",
             "Angola",
@@ -76,6 +75,51 @@ const DemographicStep = ({ data, onChange, nextStep }) => {
               {country}
             </option>
           ))}
+        </select>
+      </div>
+      <div className="my-4">
+        <label className="block">
+          <span className="gradient-text font-bold">Age Range</span>
+        </label>
+
+        <select
+          value={data.ageGroup}
+          onChange={handleInputChange("ageGroup")}
+          className="select select-bordered w-full"
+        >
+          {[
+            "18 - 25",
+            "25 - 30",
+            "30 - 35",
+            "35 - 40",
+            "40 - 45",
+            "45 - 50",
+            "50+",
+          ].map((ageGroup) => (
+            <option key={ageGroup} value={ageGroup}>
+              {ageGroup}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="my-4">
+        <label className="block">
+          <span className="gradient-text font-bold">Experience Level</span>
+        </label>
+
+        <select
+          value={data.experienceLevel}
+          onChange={handleInputChange("experienceLevel")}
+          className="select select-bordered w-full"
+        >
+          {["0 - 3", "4 - 5", "6 - 8", "9 - 11", "11 - 15", "15+"].map(
+            (experienceLevel) => (
+              <option key={experienceLevel} value={experienceLevel}>
+                {experienceLevel}
+              </option>
+            )
+          )}
         </select>
       </div>
       {/* Add more fields similarly */}

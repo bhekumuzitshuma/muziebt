@@ -8,6 +8,9 @@ import TrendsPreferencesStep from "../../components/Survey/TrendsPreferencesStep
 import TechStackStep from "../../components/Survey/TechStackStep";
 import ChallengesOpportunitiesStep from "../../components/Survey/ChallengesOpportunitiesStep";
 
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+
 const TakeSurvey = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -32,6 +35,7 @@ const TakeSurvey = () => {
     trendsPreferences: {
       openSourceInvolvement: "",
       techStackPreferences: [],
+      salaryRange: "",
     },
     challengesOpportunities: {
       biggestChallenges: [],
@@ -53,9 +57,21 @@ const TakeSurvey = () => {
     });
   };
 
-  const handleSubmit = () => {
-    console.log("Form Data Submitted:", formData);
-    // Here you would typically send the data to your backend
+  const handleSubmit = async () => {
+    try {
+      console.log("Form Data In store:", formData);
+
+      // Add the form data to a Firestore collection
+      const docRef = await addDoc(collection(db, "surveys"), formData);
+
+      console.log("Survey submitted successfully with ID:", docRef.id);
+      alert("Survey submitted successfully!");
+      // Optionally, you can redirect the user or show a success message
+      // Example: router.push("/thank-you");
+    } catch (error) {
+      console.error("Error submitting survey:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (

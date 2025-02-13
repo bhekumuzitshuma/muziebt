@@ -7,7 +7,9 @@ const DevToolsStep = ({ data, onChange, nextStep, prevStep }) => {
     <div>
       <h2 className="text-xl font-bold">Development Tools</h2>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Text Editor / IDE</label>
+        <label className="block">
+          <span className="gradient-text font-bold">Text Editor / IDE</span>
+        </label>
         <hr className="w-full my-3" />
         {["VSCode", "IntelliJ", "Sublime Text", "Vim", "Other"].map((tool) => (
           <div key={tool}>
@@ -36,7 +38,9 @@ const DevToolsStep = ({ data, onChange, nextStep, prevStep }) => {
         ))}
       </div>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Version Control</label>
+        <label className="block">
+          <span className="gradient-text font-bold">Version Control</span>
+        </label>
         <hr className="w-full my-3" />
         <select
           value={data.versionControl}
@@ -47,6 +51,22 @@ const DevToolsStep = ({ data, onChange, nextStep, prevStep }) => {
           <option value="Git">Git</option>
           <option value="SVN">SVN</option>
           <option value="Mercurial">Mercurial</option>
+        </select>
+      </div>
+      <div className="mt-4 border p-4 rounded-lg">
+        <label className="block ">
+          <span className="gradient-text font-bold">Your Operating System</span>
+        </label>
+        <hr className="w-full my-3" />
+        <select
+          value={data.operatingSystem}
+          onChange={handleInputChange("operatingSystem")}
+          className="mt-1 select select-bordered w-full"
+        >
+          <option value="">Select</option>
+          <option value="Windows">Windows</option>
+          <option value="MacOS">MacOS</option>
+          <option value="Linux">Linux</option>
         </select>
       </div>
       <div className="mt-4 flex justify-between">

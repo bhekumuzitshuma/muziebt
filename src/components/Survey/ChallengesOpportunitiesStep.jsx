@@ -12,7 +12,9 @@ const ChallengesOpportunitiesStep = ({
     <div>
       <h2 className="text-xl font-bold">Challenges & Opportunities</h2>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Biggest Challenges</label>
+        <label className="block">
+          <span className="gradient-text font-bold">Biggest Challenges</span>
+        </label>
         <hr className="w-full my-3" />
         {[
           "Learning Curve",
@@ -47,7 +49,11 @@ const ChallengesOpportunitiesStep = ({
         ))}
       </div>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Ecosystem Rating (1-10)</label>
+        <label className="block">
+          <span className="gradient-text font-bold">
+            Ecosystem Rating (1-10)
+          </span>
+        </label>
         <hr className="w-full my-3" />
         <input
           type="number"
@@ -59,7 +65,9 @@ const ChallengesOpportunitiesStep = ({
         />
       </div>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Additional Comments</label>
+        <label className="block">
+          <span className="gradient-text font-bold">Additional Comments</span>
+        </label>
         <hr className="w-full my-3" />
         <textarea
           value={data.additionalComments}

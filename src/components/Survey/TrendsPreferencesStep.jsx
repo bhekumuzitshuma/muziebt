@@ -7,7 +7,11 @@ const TrendsPreferencesStep = ({ data, onChange, nextStep, prevStep }) => {
     <div>
       <h2 className="text-xl font-bold">Trends & Preferences</h2>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Describe your Open Source Involvement</label>
+        <label className="block">
+          <span className="gradient-text font-bold">
+            Describe your Open Source Involvement
+          </span>
+        </label>
         <hr className="w-full my-3" />
         <select
           value={data.openSourceInvolvement}
@@ -21,7 +25,11 @@ const TrendsPreferencesStep = ({ data, onChange, nextStep, prevStep }) => {
         </select>
       </div>
       <div className="mt-4 border p-4 rounded-lg">
-        <label className="block">Job Role Preferences</label>
+        <label className="block">
+          <span className="gradient-text font-bold">
+            What is your job role?
+          </span>
+        </label>
         <hr className="w-full my-3" />
         {[
           "Frontend",
@@ -68,6 +76,28 @@ const TrendsPreferencesStep = ({ data, onChange, nextStep, prevStep }) => {
             <span className="ml-2">{pref}</span>
           </div>
         ))}
+      </div>
+      <div className="mt-4 border p-4 rounded-lg">
+        <label className="block">
+          <span className="gradient-text font-bold">
+            Your Salary Range (in USD)
+          </span>
+        </label>
+        <hr className="w-full my-3" />
+        <select
+          value={data.salaryRange}
+          onChange={handleInputChange("salaryRange")}
+          className="mt-1 select select-bordered w-full"
+        >
+          <option value="">Select</option>
+          <option value="$300 - $500">$300 - $500</option>
+          <option value="$501 - $1,000">$501 - $1,000</option>
+          <option value="$1,001 - $1,500">$1,001 - $1,500</option>
+          <option value="$1,501 - $2,500">$1,501 - $2,500</option>
+          <option value="$2,501 - $3,500">$2,501 - $3,500</option>
+          <option value="$3,501 - $4,500">$3,501 - $4,500</option>
+          <option value="$5,000+">$5,000+</option>
+        </select>
       </div>
       <div className="mt-4 flex justify-between">
         <button onClick={prevStep} className="black-btn">
