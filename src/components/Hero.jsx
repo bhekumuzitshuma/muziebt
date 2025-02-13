@@ -16,15 +16,11 @@ const Hero = () => {
           🚀 Backend Developer | System Architect | Cybersecurity
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in-up delay-100">
-          Engineering software that scales, adapts, and secures your business.
-        </p>
-        <p className="text-base text-gray-600 mb-12 animate-fade-in-up delay-200">
-          Building the backbone of digital systems, architecting solutions that
-          scale, and securing them against the inevitable chaos.
-          <span className="font-black text-green-500">
-            {" "}
-            See which tech stacks are taking over Zimbabwe (ZW)
-          </span>
+          Hi, my name is Bhekumuzi Tshuma. This is where I share my work with
+          the world. I do a little short survey every year, I'd be happy if
+          you'd participate. Share insights on coding trends, salaries, and
+          tools shaping{" "}
+          <span className="gradient-text">Africa's tech industry.</span>
         </p>
 
         {/* Buttons */}
