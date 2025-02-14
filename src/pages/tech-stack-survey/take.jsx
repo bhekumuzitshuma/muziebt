@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Toast from "@/components/Toast";
+
+import { useRouter } from "next/router";
 
 import MainLayout from "@/components/layout/MainLayout";
 
@@ -13,6 +16,10 @@ import { db } from "@/lib/firebase";
 import Seo from "@/components/SEO";
 
 const TakeSurvey = () => {
+  const [toast, setToast] = useState({ show: false, message: "", type: "" });
+
+  const router = useRouter();
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     demographics: {
@@ -60,18 +67,41 @@ const TakeSurvey = () => {
 
   const handleSubmit = async () => {
     try {
+      // Check if formData is completely empty
+      if (Object.keys(formData).length === 0) {
+        setToast({
+          show: true,
+          message:
+            "Form data is empty. Please fill out the form before submitting.",
+          type: "error",
+        });
+        return;
+      }
+
       console.log("Form Data In store:", formData);
 
       // Add the form data to a Firestore collection
       const docRef = await addDoc(collection(db, "surveys"), formData);
 
       console.log("Survey submitted successfully with ID:", docRef.id);
-      alert("Survey submitted successfully!");
-      // Optionally, you can redirect the user or show a success message
-      // Example: router.push("/thank-you");
+      setToast({
+        show: true,
+        message:
+          "Survey submitted successfully! Redirecting to the home page...",
+        type: "success",
+      });
+
+      // Redirect to the home page after 3 seconds
+      setTimeout(() => {
+        router.push("/"); // Redirect to the home page
+      }, 3000);
     } catch (error) {
       console.error("Error submitting survey:", error);
-      alert("An error occurred. Please try again.");
+      setToast({
+        show: true,
+        message: "An error occurred. Please try again.",
+        type: "error",
+      });
     }
   };
 
@@ -85,6 +115,13 @@ const TakeSurvey = () => {
         ogImage="/devsurvey.png"
         ogUrl="https://bhekumuzitshuma.netlify.app/"
       />
+      {toast.show && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast({ ...toast, show: false })}
+        />
+      )}
       <div className="max-w-4xl mx-auto my-4">
         <div className="p-4">
           {step === 1 && (
