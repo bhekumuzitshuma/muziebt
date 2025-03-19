@@ -16,6 +16,11 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
           rel="stylesheet"
         ></link>
+        <script
+          defer
+          data-domain="bhekumuzitshuma.netlify.app"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
       <body className="antialiased">
         <Main />
